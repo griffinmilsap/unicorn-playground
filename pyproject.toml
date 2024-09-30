@@ -1,0 +1,19 @@
+[project]
+name = "unicorn-playground"
+version = "0.1.0"
+description = "EEG playground with ezmsg-tasks for g.tec Unicorn"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "ezmsg-panel",
+    "ezmsg-sigproc>=1.3.2",
+    "ezmsg-tasks",
+    "ezmsg-unicorn",
+    "ezmsg>=3.5.0",
+    "pyqt5>=5.15.11",
+]
+
+[tool.uv.sources]
+ezmsg-unicorn = { git = "https://github.com/griffinmilsap/ezmsg-unicorn.git" }
+ezmsg-panel = { git = "https://github.com/griffinmilsap/ezmsg-panel.git" }
+ezmsg-tasks = { git = "https://github.com/griffinmilsap/ezmsg-tasks.git" }
