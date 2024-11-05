@@ -2,6 +2,7 @@ import typing
 
 import ezmsg.core as ez
 
+from ezmsg.core.collection import NetworkDefinition
 from ezmsg.unicorn.dashboard import UnicornDashboard, UnicornDashboardSettings
 from ezmsg.unicorn.device import UnicornSettings
 from ezmsg.tasks.ssvep.task import SSVEPTask
@@ -34,5 +35,10 @@ class UnicornPlayground(ez.Collection):
             'unicorn': self.UNICORN.app,
             'ssvep': self.SSVEP.app
         }
+    
+    def network(self) -> ez.NetworkDefinition:
+        return (
+            (self.UNICORN.OUTPUT_SIGNAL, self.SSVEP.INPUT_SIGNAL),
+        )
 
 
