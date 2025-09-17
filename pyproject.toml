@@ -10,8 +10,8 @@ dependencies = [
     "ezmsg-tasks",
     "ezmsg-unicorn",
     "ezmsg",
-    "pyqt5>=5.15.11",
     "vqf>=2.0.1",
+    "jupyterlab>=4.4.7",
 ]
 
 [tool.uv.sources]
